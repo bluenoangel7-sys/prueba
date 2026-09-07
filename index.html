@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
   </head>
   <body>
-    <a-scene shadow="type: pcfsoft">
+    <a-scene>
 
       <!-- Precarga del modelo CAD -->
       <a-assets>
@@ -15,15 +15,12 @@
       </a-assets>
 
       <!-- Iluminación de la escena -->
-      <a-entity light="type: ambient; color: #BBB; intensity: 0.6"></a-entity>
-
-      <a-entity light="type: directional; color: #FFF; intensity: 1; castshadow: true; shadowCameraLeft: -20; shadowCameraRight: 20; shadowCameraTop: 20; shadowCameraBottom: -20; shadowCameraFar: 60; shadowCameraNear: 0.5; shadowBias: -0.001"
-                position="-3 15 0"
-                rotation="-90 0 0"></a-entity>
+      <a-entity light="type: ambient; color: #BBB; intensity: 0.8"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-3 15 0"></a-entity>
 
       <!-- Espacio de trabajo-->
       <a-entity position="0 0 -5">
-        <a-plane rotation="-90 0 0" width="40" height="40" color="gray" shadow="receive: true"></a-plane>
+        <a-plane rotation="-90 0 0" width="40" height="40" color="gray"></a-plane>
         <a-plane position="0 10 0" rotation="90 0 0" width="30" height="30" color="#8CD9F2"></a-plane>
 
         <a-entity geometry="primitive: cylinder; radius: 3; height: 5; openEnded: true" 
@@ -62,7 +59,7 @@
         </a-entity>
 
         <!-- Brazo robótico con escala y posición Y ajustadas -->
-        <a-entity gltf-model="#brazoRobotico" position="3 2.5 1" scale="0.0015 0.0015 0.0015" rotation="0 -90 0" shadow="cast: true"></a-entity>
+        <a-entity gltf-model="#brazoRobotico" position="3 2.5 1" scale="0.0015 0.0015 0.0015" rotation="0 -90 0"></a-entity>
 
       </a-entity>
 
