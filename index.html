@@ -17,10 +17,12 @@
       <!-- Iluminación de la escena -->
       <a-entity light="type: ambient; color: #BBB; intensity: 0.6"></a-entity>
 
+      <a-entity light="type: directional; color: #FFF; intensity: 1; castshadow: true; shadowCameraLeft: -20; shadowCameraRight: 20; shadowCameraTop: 20; shadowCameraBottom: -20; shadowCameraFar: 60; shadowCameraNear: 0.5; shadowBias: -0.001"
+                position="-3 15 0"
+                rotation="-90 0 0"></a-entity>
+
       <!-- Espacio de trabajo-->
       <a-entity position="0 0 -5">
-        <a-entity light="type: directional; color: #FFF; intensity: 1; castshadow: true; shadowCameraLeft: -15; shadowCameraRight: 15; shadowCameraTop: 15; shadowCameraBottom: -15; shadowCameraFar: 40"
-                  position="-3 12 8"></a-entity>
         <a-plane rotation="-90 0 0" width="40" height="40" color="gray" shadow="receive: true"></a-plane>
         <a-plane position="0 10 0" rotation="90 0 0" width="30" height="30" color="#8CD9F2"></a-plane>
 
